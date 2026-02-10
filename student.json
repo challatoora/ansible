@@ -1,0 +1,17 @@
+{
+
+    "firstname": "murali" ,
+    "dob":"09-12-1998",
+    "Addresses": [
+
+        {
+
+           "type":"perment",
+            "flatnumber":105,
+           "city":"tirupathi"
+        }   
+    
+    ]
+    }
+
+
