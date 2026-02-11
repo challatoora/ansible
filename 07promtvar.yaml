@@ -8,11 +8,11 @@
 
 
   - name: password
-    prompt: oks enter u r password
+    prompt: pls enter u r password
     private: false
 
 
   tasks:
-  - name: murali
+  - name : murali
     ansible.builtin.debug:
       msg: "iam {{  username }},{{ password }}" 
