@@ -1,0 +1,10 @@
+- name: play variables
+  hosts: local
+  connection: local
+  vars:
+    name: murali
+    training: devops
+  task:
+    - name: printing variables
+      ansible.builtin.debug:
+       msg: "iam{{ name }} topper in {{ devops }}"
