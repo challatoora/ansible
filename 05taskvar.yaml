@@ -1,0 +1,14 @@
+- name: task level variables
+  hosts: web
+  connections: local
+  vars:
+    product: thumsup
+    campany: cocola
+  tasks:
+    - name: priniting the variables
+      vars:
+        company: pepise
+      ansible.builtin.debug:
+        msg: "the product {{ product }} its company {{ campany }}"
+        
+       
