@@ -11,7 +11,8 @@
       prompt: oks enter u r password
       private: false
 
-      tasks:
-        - name: murali
-          ansible.builtin.debug:
-           msg: "iam {{  username }},{{ password }}" 
+
+  tasks:
+      - name: murali
+        ansible.builtin.debug:
+          msg: "iam {{  username }},{{ password }}" 
