@@ -1,0 +1,11 @@
+- name: tast level variables
+  hosts: local
+  connection: local
+  vars_file:
+  - course.yaml
+  tasks:
+    - name: priniting the variables
+      vars:
+        course: salesforce
+      ansible.builtin.debug:
+        msg: " iam {{ name }} joined in {{ course }}"
