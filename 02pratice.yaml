@@ -1,0 +1,20 @@
+- name : start service only if installed
+  hosts: local
+  connection: local
+  become: yes
+
+  tasks:
+    -name: install nginx
+    ansible.builtin.package:
+    name: nginx
+    state: present
+    register: installed
+
+    -name: start nginx if installed
+    ansible.builtin.service:
+    name: nginix
+    state: started
+    when: installed.changed
+
+
+   
