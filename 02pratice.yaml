@@ -13,7 +13,7 @@
   - name: start nginx if installed
     ansible.builtin.service:
      name: nginx
-     state: started
+     state: absent
     when: installed.changed
 
 
