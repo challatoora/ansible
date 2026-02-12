@@ -1,5 +1,6 @@
  - name : install web server based on os
    hosts: local
+   connection: local
    become: yes
 
    tasks:
