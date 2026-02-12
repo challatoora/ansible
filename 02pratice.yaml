@@ -7,14 +7,9 @@
   - name: install nginx
     ansible.builtin.package:
      name: nginx
-     state: present
+     state: absent
     register: installed
 
-  - name: start nginx if installed
-    ansible.builtin.service:
-     name: nginx
-     state: absent
-    when: installed.changed
 
 
    
