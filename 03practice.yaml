@@ -6,6 +6,6 @@
   tasks:
   - name: Create deploy user
     ansible.builtin.user:
-        name: deploy
-        state: present
-    when: "'local' in group names"
+      name: deploy
+      state: present
+    when: "'local' in group_names"
