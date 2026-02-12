@@ -4,17 +4,17 @@
   become: yes
 
   tasks:
-    -name: install nginx
+  - name: install nginx
     ansible.builtin.package:
-    name: nginx
-    state: present
-    register: installed
+     name: nginx
+     state: present
+     register: installed
 
-    -name: start nginx if installed
+  - name: start nginx if installed
     ansible.builtin.service:
-    name: nginix
-    state: started
-    when: installed.changed
+     name: nginix
+     state: started
+     when: installed.changed
 
 
    
