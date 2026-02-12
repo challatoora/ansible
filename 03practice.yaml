@@ -8,4 +8,4 @@
     ansible.builtin.user:
         name: deploy
         state: present
-    when: local
+    when: "'local' in group names"
