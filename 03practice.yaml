@@ -1,0 +1,10 @@
+- name: Create user only on webservers
+  hosts: webservers
+  become: yes
+
+  tasks:
+  - name: Create deploy user
+    ansible.builtin.user:
+        name: deploy
+        state: present
+    when: 'webservers'
