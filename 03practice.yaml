@@ -1,5 +1,6 @@
 - name: Create user only on webservers
-  hosts: webservers
+  hosts: local
+  connection: local
   become: yes
 
   tasks:
@@ -7,4 +8,4 @@
     ansible.builtin.user:
         name: deploy
         state: present
-    when: "'webservers'"
+    when: local
