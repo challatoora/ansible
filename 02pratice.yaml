@@ -14,7 +14,7 @@
     ansible.builtin.service:
      name: nginx
      state: started
-     when: installed.changed
+    when: installed.changed
 
 
    
