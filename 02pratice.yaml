@@ -8,7 +8,7 @@
     ansible.builtin.package:
      name: nginx
      state: present
-     register: installed
+    register: installed
 
   - name: start nginx if installed
     ansible.builtin.service:
